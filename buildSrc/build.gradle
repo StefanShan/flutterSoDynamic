@@ -1,0 +1,22 @@
+plugins {
+    id 'java-library'
+    id 'java-gradle-plugin'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+repositories {
+    google()
+    mavenCentral()
+}
+
+dependencies {
+    implementation gradleApi()
+    implementation localGroovy()
+    implementation 'com.squareup.okhttp3:okhttp:3.14.9'
+    implementation 'org.json:json:20210307'
+    compileOnly ("com.android.tools.build:gradle:7.0.2")
+}
